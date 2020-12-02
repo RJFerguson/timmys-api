@@ -1,9 +1,9 @@
 'use strict';
 
-const Lab = require('lab');
-const Code = require('code');
+const Lab = require('@hapi/lab');
+const Code = require('@hapi/code');
 const Config = require('../../../config');
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 const ReversePlugin = require('../../../server/api/reverse');
 
 const lab = exports.lab = Lab.script();

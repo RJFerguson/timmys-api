@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
+    "start:updated": "nodemon updated/server.js",
     "test": "lab -c -L",
     "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
   },

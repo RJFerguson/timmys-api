@@ -7,7 +7,9 @@
     "start": "nodemon server.js",
     "start:updated": "nodemon updated/server.js",
     "test": "lab -c -L",
-    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
+    "test:noLint": "lab -c",
+    "test:watch": "fsmonitor -s -p '+*.js' npm run test:noLint" 
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,8 @@
     "@hapi/glue": "^8.0.0",
     "@hapi/hapi": "^20.0.3",
     "@hapi/hoek": "^9.1.0",
-    "confidence": "^5.0.0"
+    "confidence": "^5.0.0",
+    "fsmonitor": "^0.2.4"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.2",

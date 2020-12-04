@@ -1,21 +1,14 @@
 'use strict';
 
-exports.register = function (server, options, next) {
-
-    server.route({
-        method: 'POST',
-        path: '/people/',
-        handler: function (request, reply) {
-
-            reply({});
-
-        }
-    });
-
-    next();
-
-};
-
-exports.register.attributes = {
-    name: 'people'
+exports.plugin = {
+    name: 'people',
+    register: function (server, options) {
+        server.route({
+            method: 'GET',
+            path: '/people',
+            handler: function (request) {
+                return {};
+            }
+        });
+    }
 };
